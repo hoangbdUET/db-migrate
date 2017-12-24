@@ -1,0 +1,13 @@
+{
+    "database": {
+        "user": "root",
+        "password": "qwertyui",
+        "host": "localhost",
+        "port": 3306,
+        "dialect": "mysql",
+        "operatorsAliases": false
+    },
+    "application": {
+        "port": 3000
+    }
+}
