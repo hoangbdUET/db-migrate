@@ -5,12 +5,12 @@ let db = require('./database');
 function main() {
     db.getListDatabase(function (dbs) {
         asyncEach(dbs, function(dbConnection, next){
-            dbConnection.query("SELECT * FROM well", { type: sequelize.QueryTypes.SELECT }).then(rs=>{
+            dbConnection.query("ALTER TABLE crossplot ADD duplicated int(11) NOT NULL DEFAULT 1", { type: sequelize.QueryTypes.SELECT }).then(rs=>{
                 console.log(rs);
                 dbConnection.close();
                 next();
             }).catch(err=>{
-                console.log("Loi roi : ", err);
+                console.log("Loi roi : ", err.message);
                 next();
                 dbConnection.close();
             });
