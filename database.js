@@ -8,9 +8,10 @@ const sequelize = new Sequelize('', config.database.user, config.database.passwo
     dialect: config.database.dialect,
     operatorsAliases: config.database.operatorsAliases
 });
-function getListDatabase(callback){
-    let dbs = new Array();    
-    sequelize.query("SHOW DATABASES LIKE 'wi_%' ", { type: sequelize.QueryTypes.SHOWTABLES }).then(rs => {
+
+function getListDatabase(callback) {
+    let dbs = new Array();
+    sequelize.query("SHOW DATABASES LIKE 'wi_%' ", {type: sequelize.QueryTypes.SHOWTABLES}).then(rs => {
         asyncEach(rs, function (database, next) {
             if (database === "wi_users" || database === "wi_backend") {
                 next();
@@ -32,9 +33,9 @@ function getListDatabase(callback){
         });
     }).catch(err => {
         callback(dbs);
-    });    
+    });
 }
 
 module.exports = {
-    getListDatabase : getListDatabase
-}
+    getListDatabase: getListDatabase
+};

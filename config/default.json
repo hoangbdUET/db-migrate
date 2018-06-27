@@ -8,6 +8,6 @@
         "operatorsAliases": false
     },
     "application": {
-        "port": 3000
+        "port": 3307
     }
 }
