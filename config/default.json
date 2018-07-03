@@ -1,13 +1,14 @@
 {
-    "database": {
-        "user": "root",
-        "password": "qwertyui",
-        "host": "localhost",
-        "port": 3306,
-        "dialect": "mysql",
-        "operatorsAliases": false
-    },
-    "application": {
-        "port": 3307
-    }
+  "database": {
+    "user": "root",
+    "password": "qwertyui",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "operatorsAliases": false
+  },
+  "application": {
+    "port": 3307
+  }
 }
