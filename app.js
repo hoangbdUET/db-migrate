@@ -3,6 +3,9 @@ const app = express();
 const config = require('config');
 const Sequelize = require('sequelize');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+app.use(cors());
 app.use(bodyParser.json());
 let sequelize = new Sequelize(config.database.mysql, config.database.user, config.database.password, {
     define: {
