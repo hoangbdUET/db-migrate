@@ -4,3 +4,4 @@ config/production.json
 /.idea/
 /db-migrate.iml
 /package-lock.json
+/config/

@@ -49,8 +49,10 @@ app.get('/t', function (req, res) {
     });
 });
 
-app.listen(config.application.port, function (err) {
-    if (!err) {
-        console.log("Db migration app listening on port " + config.application.port);
-    }
-});
+// app.listen(config.application.port, function (err) {
+//     if (!err) {
+//         console.log("Db migration app listening on port " + config.application.port);
+//     }
+// });
+
+module.exports = app;
